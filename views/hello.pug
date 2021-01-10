@@ -1,0 +1,30 @@
+extends layout
+
+block header
+  h2 Overriding default header from layout.pug
+
+block content
+  p This was inserted into layout.pug block content by extending layout and adding this line of text under block content in hello.pug file
+  h2 Sale ends in #{h.moment().endOf("day").fromNow()}
+
+block footer
+  p Overwriting default footer from layout.pug!
+
+//-.wrapper.ohno
+//-  - const upDog = dog.toUpperCase(); // variables can be set after a hyphen (-) which then activates JS for that line
+//-  p.hello Hello my dogs name is #{dog.toUpperCase()}!
+//-  span#yo Yo!
+//-  img.dog(src="dog.jpg" alt=`Dog ${dog}`)
+
+//-h2
+//-  | Hello,
+//-  br
+//-  em How are you?
+
+//- div is understood and can start with .wrapper; any . after that is a class attribute
+//- any . after tag is a class attribute
+//- string interpolation of html text is done with surrounding #{ }
+//- id attribute is # right after tag name
+//- other tag attributes other than class or id are set in ( ) after the tag and class or id if it has that
+//- use | to break to a new line
+//- tags and child tags must be indented appropriately (indentation sensitive)
